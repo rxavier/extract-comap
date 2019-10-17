@@ -11,7 +11,7 @@ pdf = sorted(glob.glob1("pdfs", "*.pdf"))[-1]
 pars_row_tol = 4.5
 pars_cols = ["228, 249, 473"]
 
-ext_current = camelot.read_pdf(pdf, flavor="stream", pages="1-end",
+ext_current = camelot.read_pdf(f"pdfs/{pdf}", flavor="stream", pages="1-end",
                                row_tol=pars_row_tol, columns=pars_cols)
 
 table_list = []

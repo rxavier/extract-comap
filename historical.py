@@ -27,7 +27,7 @@ extracted_data = {}
 workbook = openpyxl.Workbook()
 for filename, parameters in pdfs_dict.items():
 
-    ext_tables = camelot.read_pdf(filename, flavor="stream", pages="1-end",
+    ext_tables = camelot.read_pdf(f"pdfs/{filename}", flavor="stream", pages="1-end",
                                   row_tol=parameters[0], columns=parameters[1])
 
     table_list = []
